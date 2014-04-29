@@ -1,0 +1,164 @@
+<div id='ime_keypad' style='display:none'>
+
+    <div id='keypad_keyinfo'>
+        <div id='info_l'></div>
+        <div id='keypad_keyinfo_text'></div>
+        <div id='info_r'></div>
+    </div>
+    <div id='key1' class='key_n'>
+        <div class='key_blue'>1</div>
+        <div id='key1_txt' class='txt'></div>
+    </div>
+    <div id='key2' class='key_n'>
+        <div class='key_blue'>2</div>
+        <div id='key2_txt' class='txt'></div>
+    </div>
+    <div id='key3' class='key_n'>
+        <div class='key_blue'>3</div>
+        <div id='key3_txt' class='txt'></div>
+    </div>
+    <div id='key4' class='key_n'>
+        <div class='key_blue'>4</div>
+        <div id='key4_txt' class='txt'></div>
+    </div>
+    <div id='key5' class='key_n'>
+        <div class='key_blue'>5</div>
+        <div id='key5_txt' class='txt'></div>
+    </div>
+    <div id='key6' class='key_n'>
+        <div class='key_blue'>6</div>
+        <div id='key6_txt' class='txt'></div>
+    </div>
+    <div id='key7' class='key_n'>
+        <div class='key_blue'>7</div>
+        <div id='key7_txt' class='txt'></div>
+    </div>
+    <div id='key8' class='key_n'>
+        <div class='key_blue'>8</div>
+        <div id='key8_txt' class='txt'></div>
+    </div>
+    <div id='key9' class='key_n'>
+        <div class='key_blue'>9</div>
+        <div id='key9_txt' class='txt'></div>
+    </div>
+    <div id='keyl' class='key_n'>
+
+        <div id='key_mode' class='key_blue'>
+            <img id='keyl_img'/>
+        </div>
+        <div id='keyl_txt' class='txt'>Shift</div>
+    </div>
+    <div id='key0' class='key_n'>
+        <div class='key_blue'>0</div>
+        <div id='key0_txt' class='txt'></div>
+    </div>
+    <div id='keyr' class='key_n'>
+        <div id='key_delete' class='key_blue'>PRE-CH</div>
+        <div id='keyr_txt' class='txt'>Delete</div>
+    </div>
+    <div id='imeWnd'>
+        <div id='ime_mode'></div>
+        <div id='ime_kor'>가</div>
+        <div id='ime_latin_small'>ab</div>
+        <div id='ime_latin_cap'>Ab</div>
+        <div id='ime_latin_big'>AB</div>
+        <div id='ime_num'>1</div>
+
+        <div id='ime_special'>
+            <img src=""/>
+        </div>
+    </div>
+    <div id='ime_keypad_help'>
+
+        <div id='ime_keypad_help_inputmethod'>
+            <img src=""/> <span id='ime_keypad_help_inputmethodtxt'>Input Method</span>
+        </div>
+        <div id='ime_keypad_help_word'>
+            <img src=""/> <span id='ime_keypad_help_wordselect'>Select Word</span>
+        </div>
+        <div id='ime_keypad_help_page'>
+            <img src=""/> <span id='ime_keypad_help_pagemove'>Prev./Next</span>
+        </div>
+        <div id='ime_keypad_help_language'>
+            <img src=""/> <span id='ime_keypad_help_languagetxt'>Language: English</span>
+        </div>
+    </div>
+</div>
+<div id='ime_dimm' style='display:none'></div>
+
+<div id='ime_divPluginObject' style='display:none'>
+<!-- objects here -->
+</div>
+
+
+<div id='ime_wordselect' style='display:none'>
+    <div id='ime_word_help'></div>
+    <div id='ime_word_info'></div>
+
+    <div id='ime_word_items_outline'>
+        <div id='ime_word_items'></div>
+    </div>
+</div>
+<div id='ime_option' style='display:none'>
+    <a id='ime_option_focus'></a>
+
+    <div id='ime_option_title' class='title'>Language</div>
+    <div id='ime_option_hr1' class='hr'></div>
+
+    <div id='ime_option_content'>
+        <div id='ime_option_item0' class='lang_n'></div>
+        <div id='ime_option_item1' class='lang_n'></div>
+        <div id='ime_option_item2' class='lang_n'></div>
+        <div id='ime_option_item3' class='lang_n'></div>
+        <div id='ime_option_item4' class='lang_n'></div>
+    </div>
+    <div id='ime_long_scroll'>
+        <div id='ime_long_scrollbar'>
+            <!--<img src='img/sbs_scroll_bg.png'>-->
+        </div>
+
+        <div id='ime_long_button'>
+            <img src=""/> <img id='ime_long_middleButton' src=""/> <img src=""/>
+        </div>
+    </div>
+    <div id='ime_option_hr2' class='hr'></div>
+
+    <div id='ime_option_help' class='helpdiv'>
+
+        <div>
+            <img src=""/> <span id='help_lang_return_txt' class='helptxt'>Return</span>
+        </div>
+    </div>
+</div>
+<div id='ime_addword' style="display:none">
+    <div id='ime_addword_title' class='title'>Add to Dictionary</div>
+    <div id='ime_addword_hr1' class='hr'></div>
+    <div id='ime_addword_content'>Add your own word to your dictionary
+    </div>
+    <input id='_ime_AddText' />
+
+    <div id='ime_addword_hr2' class='hr'></div>
+
+    <div id='ime_addword_help' class='helpdiv'>
+
+        <div>
+            <img src=""/> <span id='help_addword_return_txt' class='helptxt'>Return</span>
+        </div>
+        <div>
+            <img src=""/> <span id='help_addword_save_txt' class='helptxt'>Save</span>
+        </div>
+    </div>
+</div>
+
+
+
+    <object type="application/x-qt-plugin" id='pluginObjectAppCommon_IME'
+            classid="clsid:SAMSUNG-INFOLINK-APPCOMMON" width=0 height=0></object>
+    <object type="application/x-qt-plugin" id='pluginObjectIME'  width="0" height="0"></object>
+    <object type="application/x-qt-plugin" id='pluginObjectIMEXT9'  width="0" height="0"></object>
+    <object type="application/x-qt-plugin" id='pluginObjectKeyboard_IME'  width="0" height="0"></object>
+    <object type="application/x-qt-plugin" id='pluginObjectTV_IME'  width="0" height="0"></object>
+    <object type="application/x-qt-plugin" id='pluginObjectRECOG_IME'  width="0" height="0"></object>
+    <object type="application/x-qt-plugin" id='pluginOjectSef_IME'  width="0" height="0"></object>
+    <object type="application/x-qt-plugin" id='pluginOjectAUI_IME'  width="0" height="0"></object>
+

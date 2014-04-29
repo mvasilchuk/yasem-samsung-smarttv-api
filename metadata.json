@@ -1,0 +1,7 @@
+{
+  "name":"samsung Smart TV API implementation",
+  "version": "0.1",
+  "id": "samsung-smart-tv-plugin",
+    "roles": ["stbapi"],
+    "dependencies": ["datasource"]
+}

@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/samsung/Common/IME">
+        <file alias="ime2.js">js/ime2.js</file>
+    </qresource>
+    <qresource prefix="/samsung/Common/Util">
+        <file alias="Include.js">js/Include.js</file>
+        <file alias="Language.js">js/Language.js</file>
+    </qresource>
+    <qresource prefix="/samsung/Common/API">
+        <file alias="Plugin.js">js/Plugin.js</file>
+        <file alias="TVKeyValue.js">js/TVKeyValue.js</file>
+        <file alias="CM_AVSetting.js">js/CM_AVSetting.js</file>
+        <file alias="Widget.js">js/Widget.js</file>
+    </qresource>
+    <qresource prefix="/samsung/html">
+        <file alias="ime.html">html/ime.html</file>
+    </qresource>
+    <qresource prefix="/samsung/Common/Plugin">
+        <file alias="Define.js">js/Define.js</file>
+    </qresource>
+    <qresource prefix="/samsung/Common">
+        <file alias="jquery.js">js/jquery-2.1.0.min.js</file>
+        <file alias="core.js">js/Common_core.js</file>
+    </qresource>
+    <qresource prefix="/samsung/Common/OpenSrc">
+        <file alias="jquery-1.4.2.min.js">js/jquery-2.1.0.min.js</file>
+    </qresource>
+</RCC>
