@@ -84,7 +84,9 @@ OTHER_FILES += \
     html/ime.html \
     js/Language.js \
     js/jquery-2.1.0.min.js \
-    js/Common_core.js
+    js/Common_core.js \
+    LICENSE \
+    README.md
 
 RESOURCES += \
     resources.qrc
