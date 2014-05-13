@@ -4,13 +4,14 @@
 #
 #-------------------------------------------------
 
+VERSION = 1.0.0
+
 QT       = core gui widgets xml
 
-CONFIG += C++11
+CONFIG += c++11
 
 TARGET = yasem-samsung-smarttv-api
 TEMPLATE = lib
-CONFIG += plugin
 
 DEFINES += SAMSUNGSMARTTVWEBPLUGIN_LIBRARY
 
