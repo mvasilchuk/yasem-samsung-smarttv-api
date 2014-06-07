@@ -9,6 +9,7 @@ Storage::Storage(Profile *profile, QWidget *parent) :
 
 QString Storage::GetPluginInfo(int infoId)
 {
+    Q_UNUSED(infoId);
     return profile->datasource()->get(group(), "version", "STORAGE-00011");
 }
 

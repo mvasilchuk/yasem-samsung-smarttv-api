@@ -12,6 +12,7 @@ NNAVI::NNAVI(Profile *profile, QWidget *parent) :
 
 QString NNAVI::GetPluginInfo(int infoId)
 {
+    Q_UNUSED(infoId);
     return profile->datasource()->get(group(), "version", "0.1");
 }
 

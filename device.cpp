@@ -9,6 +9,7 @@ Device::Device(Profile *profile, QWidget *parent) :
 
 QString Device::GetPluginInfo(int infoId)
 {
+    Q_UNUSED(infoId);
     return profile->datasource()->get(group(), "version", "Device-00011");
 }
 

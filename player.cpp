@@ -12,6 +12,7 @@ Player::Player(Profile *profile, QWidget *parent) :
 
 QString Player::GetPluginInfo(int infoId)
 {
+    Q_UNUSED(infoId);
     return profile->datasource()->get(group(), "version", "0.1");
 }
 

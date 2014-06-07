@@ -21,13 +21,7 @@ SamsungProfile::SamsungProfile(StbPlugin *profilePlugin, const QString &id = "")
 void SamsungProfile::start()
 {
     STUB();
-    //QString defaultUrlString = "file://~/Dropbox/src/nRuHD/index.html";
-    //QString urlString = "file:///home/max/Dropbox/src/ONLINE_VIDEO/index.html";
-    //QString urlString = "file:///home/max/Dropbox/src/NetPlayer/index.html";
-    //QString urlString = "file:///home/max/Dropbox/src/NetPlayer/index.html";
-    //QString urlString = "file:///home/max/Dropbox/src/sIPTV/index.html";
-    //QString urlString = "file:///home/max/Dropbox/src/zoomby/index.html";
-    //QString urlString = "file:///home/max/Dropbox/src/karaoke/index.html";
+
     QString defaultUrlString = "file://~/Dropbox/src/NetTvPlus_1.1_Europe_20121011/index.html";
 
     configureKeyMap();

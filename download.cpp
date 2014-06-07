@@ -9,6 +9,7 @@ Download::Download(Profile *profile, QWidget *parent) :
 
 QString Download::GetPluginInfo(int infoId)
 {
+    Q_UNUSED(infoId);
     return profile->datasource()->get(group(), "version", "Download-00011");
 }
 

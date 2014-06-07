@@ -12,7 +12,7 @@ ConfigData::ConfigData(QObject *parent) :
 
 void ConfigData::loadConfig(const QString &path)
 {
-
+    Q_UNUSED(path);
 }
 
 void ConfigData::parseConfigFile(QString fileName)

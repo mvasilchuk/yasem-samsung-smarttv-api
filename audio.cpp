@@ -13,6 +13,7 @@ Audio::Audio(Profile *profile, QWidget *parent) :
 
 QString Audio::GetPluginInfo(int infoId)
 {
+    Q_UNUSED(infoId);
     return profile->datasource()->get(group(), "version", "AUDIO-00011");
 }
 

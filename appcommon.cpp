@@ -13,6 +13,7 @@ AppCommon::AppCommon(Profile *profile, QWidget *parent) :
 
 QString AppCommon::GetPluginInfo(int infoId)
 {
+    Q_UNUSED(infoId);
     return profile->datasource()->get(group(), "version", "0.1");
 }
 

@@ -11,6 +11,7 @@ Screen::Screen(Profile *profile, QWidget *parent) :
 
 QString Screen::GetPluginInfo(int infoId)
 {
+    Q_UNUSED(infoId);
     return profile->datasource()->get(group(), "version", "0.1");
 }
 
