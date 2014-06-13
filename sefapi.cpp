@@ -21,6 +21,6 @@ QString SefApi::group()
 
 QString SefApi::Execute(const QString &cmd)
 {
-    STUB();
+    STUB() << cmd;
     return "";
 }

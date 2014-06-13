@@ -19,7 +19,7 @@ QString AppCommon::GetPluginInfo(int infoId)
 
 void AppCommon::SubscribeEvent(int event)
 {
-    STUB_WITH_PARAMS(event);
+    STUB() << event;
 }
 
 QString AppCommon::group()

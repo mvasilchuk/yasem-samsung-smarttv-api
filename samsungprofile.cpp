@@ -31,7 +31,7 @@ void SamsungProfile::start()
     profilePlugin->browser()->setUserAgent(userAgents.value(userAgent));
 
     QString urlString = portal();
-    DEBUG(urlString);
+    DEBUG() << urlString;
     QUrl portalUrl = QUrl(urlString.replace("~", QDir::homePath()));
     configData.parseConfigFile(portalUrl.toString(QUrl::RemoveFilename));
 

@@ -28,7 +28,7 @@ QObject* FileSystem::openFile(const QString &name, const QString &access)
     QFile* file = new QFile(name);
     bool isOpened = file->open(QFile::ReadOnly);
     if(!isOpened)
-        WARN(QString("File '%1' is not opened!").arg(name));
+        qWarning() << "File '%1' is not opened!" << name;
     return file;
 }
 

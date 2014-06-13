@@ -17,12 +17,12 @@ void ConfigData::loadConfig(const QString &path)
 
 void ConfigData::parseConfigFile(QString fileName)
 {
-    STUB_WITH_PARAMS(fileName);
+    STUB() << fileName;
     QFile* file = new QFile(QString(fileName.replace("file://", "")).append("config.xml"));
 
     /* If we can't open it, let's show an error message. */
     if (!file->open(QIODevice::ReadOnly | QIODevice::Text)) {
-        ERROR(QString("Couldn't open %1").arg(file->fileName()));
+        ERROR() << QString("Couldn't open %1").arg(file->fileName());
         return;
     }
     QXmlStreamReader xml(file);
@@ -36,7 +36,7 @@ void ConfigData::parseConfigFile(QString fileName)
             QString name = xml.name().toString();
             xml.readNext();
             QString value = xml.text().toString();
-            INFO(QString("xml: %1 -> %2").arg(name).arg(value));
+            qDebug() << QString("xml: %1 -> %2").arg(name).arg(value);
 
             //if(rowName == "type")
             //    type = value;
@@ -98,7 +98,7 @@ void ConfigData::parseConfigFile(QString fileName)
     }
 
     if(xml.hasError()) {
-        ERROR(xml.errorString());
+        ERROR() << xml.errorString();
     }
 
     xml.clear();

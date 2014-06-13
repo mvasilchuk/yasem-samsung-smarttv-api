@@ -29,10 +29,10 @@ QString NNAVI::group()
 
 void NNAVI::unregistKey(int key)
 {
-    STUB_WITH_PARAMS(key);
+    STUB() << key;
 }
 
 void NNAVI::SetBannerState(int state)
 {
-    STUB_WITH_PARAMS(state);
+    STUB() << state;
 }

@@ -118,7 +118,7 @@ QUrl SamsungSmartTvWebPlugin::handleUrl(QUrl &url)
     {
         urlString = urlString.replace(QRegExp("(?:.*)\\$MANAGER_WIDGET/"), "qrc:///samsung/");
         QUrl u = QUrl(urlString);
-        DEBUG(u.url());
+        DEBUG() << u.url();
         return u;
     }
 
