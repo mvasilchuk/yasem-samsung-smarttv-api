@@ -35,6 +35,8 @@ public:
 
     virtual Profile* createProfile(const QString &id) ;
     QString getProfileClassId();
+    QString getIcon(const QSize &size);
+
 
 public slots:
     bool receiveKeyCode(RC_KEY keyCode);
@@ -51,6 +53,9 @@ protected:
     // StbProfilePlugin interface
 public:
     void init();
+
+    // StbPlugin interface
+
 };
 
 }

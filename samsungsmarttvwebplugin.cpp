@@ -203,5 +203,7 @@ void SamsungSmartTvWebPlugin::init()
 }
 
 
-
-
+QString SamsungSmartTvWebPlugin::getIcon(const QSize &size = QSize())
+{
+    return "";
+}

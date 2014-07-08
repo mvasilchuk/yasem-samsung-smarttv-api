@@ -15,7 +15,7 @@ TEMPLATE = lib
 
 DEFINES += SAMSUNGSMARTTVWEBPLUGIN_LIBRARY
 
-INCLUDEPATH += ../yasem-core
+INCLUDEPATH += ../../yasem-core
 
 SOURCES += samsungsmarttvwebplugin.cpp \
     audio.cpp \
@@ -70,7 +70,7 @@ unix {
     INSTALLS += target
 }
 
-include(../common.pri)
+include(../../common.pri)
 DESTDIR = $$DEFAULT_PLUGIN_DIR
 
 OTHER_FILES += \
