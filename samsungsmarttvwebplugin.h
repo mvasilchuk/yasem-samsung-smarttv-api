@@ -56,6 +56,11 @@ public:
 
     // StbPlugin interface
 
+
+    // Plugin interface
+public:
+    void register_dependencies();
+    void register_roles();
 };
 
 }

@@ -36,10 +36,13 @@
 using namespace yasem;
 
 SamsungSmartTvWebPlugin::SamsungSmartTvWebPlugin()
+    : StbPlugin()
 {
     STUB();
-    this->browserPlugin = NULL;
+    this->browser(NULL);
     created = false;
+
+    QList<QString> subModels = getSubmodels();
 
     subModels.append("UE65F8000ATXUA");
     subModels.append("UE55F8500ATXUA");
@@ -92,7 +95,7 @@ SamsungSmartTvWebPlugin::SamsungSmartTvWebPlugin()
 PLUGIN_ERROR_CODES SamsungSmartTvWebPlugin::initialize()
 {
     STUB();
-    browser(dynamic_cast<BrowserPlugin*>(PluginManager::instance()->getByRole("browser")));
+    browser(dynamic_cast<BrowserPlugin*>(PluginManager::instance()->getByRole(ROLE_BROWSER)));
     Q_ASSERT(browser() != NULL);
     return PLUGIN_ERROR_NO_ERROR;
 }
@@ -156,7 +159,7 @@ void SamsungSmartTvWebPlugin::resetObjects()
 
     QString mimeType = "application/x-qt-plugin";
 
-    webObjects.clear();
+    getWebObjects().clear();
     addWebObject("Audio",       mimeType, "clsid:SAMSUNG-INFOLINK-AUDIO",       "Samsung Audio API",        [=]() { return new Audio(profile);      });
     addWebObject("TVMV",        mimeType, "clsid:SAMSUNG-INFOLINK-TVMW",        "Samsung TVMV API",         [=]() { return new TVMV(profile);       });
     addWebObject("FrontPanel",  mimeType, "clsid:SAMSUNG-INFOLINK-FRONTPANEL",  "Samsung FrontPanel API",   [=]() { return new FrontPanel(profile); });
@@ -186,9 +189,9 @@ void SamsungSmartTvWebPlugin::resetObjects()
     AppCommon* appCommon = new AppCommon(profile);
     addWebObject("AppCommon",   appCommon,                  mimeType, "clsid:SAMSUNG-INFOLINK-APPCOMMON",   "Samsung AppCommon API");
 
-    api.clear();
+    getApi().clear();
     qDebug() << "__FileSystem__: " << fs;
-    api.insert("__FileSystem__", fs);
+    getApi().insert("__FileSystem__", fs);
     //api.insert("__AppCommon__", sappCommon);
 }
 
@@ -206,4 +209,17 @@ void SamsungSmartTvWebPlugin::init()
 QString SamsungSmartTvWebPlugin::getIcon(const QSize &size = QSize())
 {
     return "";
+}
+
+
+void yasem::SamsungSmartTvWebPlugin::register_dependencies()
+{
+    add_dependency(ROLE_BROWSER);
+    add_dependency(ROLE_DATASOURCE);
+    add_dependency(ROLE_MEDIA);
+}
+
+void yasem::SamsungSmartTvWebPlugin::register_roles()
+{
+    register_role(ROLE_STB_API);
 }
