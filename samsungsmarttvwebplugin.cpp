@@ -42,53 +42,53 @@ SamsungSmartTvWebPlugin::SamsungSmartTvWebPlugin()
     this->browser(NULL);
     created = false;
 
-    QList<QString> subModels = getSubmodels();
+    QList<StbSubmodel> subModels = getSubmodels();
 
-    subModels.append("UE65F8000ATXUA");
-    subModels.append("UE55F8500ATXUA");
-    subModels.append("UE55F8000ATXUA");
-    subModels.append("UE46F8500ATXUA");
-    subModels.append("UE46F8000ATXUA");
-    subModels.append("UE40F8000ATXUA");
+    subModels.append(StbSubmodel("UE65F8000ATXUA"));
+    subModels.append(StbSubmodel("UE55F8500ATXUA"));
+    subModels.append(StbSubmodel("UE55F8000ATXUA"));
+    subModels.append(StbSubmodel("UE46F8500ATXUA"));
+    subModels.append(StbSubmodel("UE46F8000ATXUA"));
+    subModels.append(StbSubmodel("UE40F8000ATXUA"));
 
-    subModels.append("UE60F7000ATXUA");
-    subModels.append("UE55F7000ATXUA");
-    subModels.append("UE46F7000ATXUA");
-    subModels.append("UE40F7000ATXUA");
+    subModels.append(StbSubmodel("UE60F7000ATXUA"));
+    subModels.append(StbSubmodel("UE55F7000ATXUA"));
+    subModels.append(StbSubmodel("UE46F7000ATXUA"));
+    subModels.append(StbSubmodel("UE40F7000ATXUA"));
 
-    subModels.append("UE60F6100AKXUA");
-    subModels.append("UE55F6800ABXUA");
-    subModels.append("UE55F6650ABXUA");
-    subModels.append("UE55F6500ABXUA");
-    subModels.append("UE55F6400AKXUA");
-    subModels.append("UE55F6100AKXUA");
-    subModels.append("UE50F6500ABXUA");
-    subModels.append("UE50F6400AKXUA");
+    subModels.append(StbSubmodel("UE60F6100AKXUA"));
+    subModels.append(StbSubmodel("UE55F6800ABXUA"));
+    subModels.append(StbSubmodel("UE55F6650ABXUA"));
+    subModels.append(StbSubmodel("UE55F6500ABXUA"));
+    subModels.append(StbSubmodel("UE55F6400AKXUA"));
+    subModels.append(StbSubmodel("UE55F6100AKXUA"));
+    subModels.append(StbSubmodel("UE50F6500ABXUA"));
+    subModels.append(StbSubmodel("UE50F6400AKXUA"));
 
-    subModels.append("UE50F6330AKXUA");
-    subModels.append("UE50F6200AKXUA");
-    subModels.append("UE50F6100AKXUA");
-    subModels.append("UE46F6650ABXUA");
-    subModels.append("UE46F6510ABXUA");
-    subModels.append("UE46F6500ABXUA");
-    subModels.append("UE46F6400AKXUA");
-    subModels.append("UE46F6330AKXUA");
-    subModels.append("UE46F6200AKXUA");
-    subModels.append("UE46F6100AKXUA");
-    subModels.append("UE40F6800ABXUA");
-    subModels.append("UE40F6650ABXUA");
-    subModels.append("UE40F6510ABXUA");
-    subModels.append("UE40F6500ABXUA");
-    subModels.append("UE40F6400AKXUA");
-    subModels.append("UE40F6330AKXUA");
-    subModels.append("UE40F6200AKXUA");
-    subModels.append("UE40F6100AKXUA");
-    subModels.append("UE32F6800ABXUA");
-    subModels.append("UE32F6510ABXUA");
-    subModels.append("UE32F6400AKXUA");
-    subModels.append("UE32F6330AKXUA");
-    subModels.append("UE32F6200AKXUA");
-    subModels.append("UE32F6100AKXUA");
+    subModels.append(StbSubmodel("UE50F6330AKXUA"));
+    subModels.append(StbSubmodel("UE50F6200AKXUA"));
+    subModels.append(StbSubmodel("UE50F6100AKXUA"));
+    subModels.append(StbSubmodel("UE46F6650ABXUA"));
+    subModels.append(StbSubmodel("UE46F6510ABXUA"));
+    subModels.append(StbSubmodel("UE46F6500ABXUA"));
+    subModels.append(StbSubmodel("UE46F6400AKXUA"));
+    subModels.append(StbSubmodel("UE46F6330AKXUA"));
+    subModels.append(StbSubmodel("UE46F6200AKXUA"));
+    subModels.append(StbSubmodel("UE46F6100AKXUA"));
+    subModels.append(StbSubmodel("UE40F6800ABXUA"));
+    subModels.append(StbSubmodel("UE40F6650ABXUA"));
+    subModels.append(StbSubmodel("UE40F6510ABXUA"));
+    subModels.append(StbSubmodel("UE40F6500ABXUA"));
+    subModels.append(StbSubmodel("UE40F6400AKXUA"));
+    subModels.append(StbSubmodel("UE40F6330AKXUA"));
+    subModels.append(StbSubmodel("UE40F6200AKXUA"));
+    subModels.append(StbSubmodel("UE40F6100AKXUA"));
+    subModels.append(StbSubmodel("UE32F6800ABXUA"));
+    subModels.append(StbSubmodel("UE32F6510ABXUA"));
+    subModels.append(StbSubmodel("UE32F6400AKXUA"));
+    subModels.append(StbSubmodel("UE32F6330AKXUA"));
+    subModels.append(StbSubmodel("UE32F6200AKXUA"));
+    subModels.append(StbSubmodel("UE32F6100AKXUA"));
 }
 
 
