@@ -151,7 +151,7 @@ QString SamsungSmartTvWebPlugin::name()
 }
 
 
-void SamsungSmartTvWebPlugin::resetObjects()
+void SamsungSmartTvWebPlugin::resetObjects(AbstractWebPage* page)
 {
     STUB();
     Profile* profile = ProfileManager::instance()->getActiveProfile();
@@ -200,9 +200,9 @@ void SamsungSmartTvWebPlugin::applyFixes()
 
 }
 
-void SamsungSmartTvWebPlugin::init()
+void SamsungSmartTvWebPlugin::init(AbstractWebPage* page)
 {
-    resetObjects();
+    resetObjects(page);
 }
 
 

@@ -14,6 +14,8 @@ namespace yasem
 {
 
 class Profile;
+class AbstractWebPage;
+
 class SAMSUNGSMARTTVWEBPLUGINSHARED_EXPORT SamsungSmartTvWebPlugin: public QObject,
         public StbPlugin
 {
@@ -47,12 +49,12 @@ public slots:
 protected:
 
     bool created;
-    void resetObjects();
+    void resetObjects(AbstractWebPage* page);
     void applyFixes();
 
     // StbProfilePlugin interface
 public:
-    void init();
+    void init(AbstractWebPage* page);
 
     // StbPlugin interface
 
