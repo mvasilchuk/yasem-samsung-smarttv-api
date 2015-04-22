@@ -1,7 +1,7 @@
 
 #include "stbprofile.h"
 #include "plugin.h"
-#include "browserplugin.h"
+#include "browserpluginobject.h"
 #include "samsungsmarttvwebplugin.h"
 #include "audio.h"
 #include "tvmv.h"
@@ -36,7 +36,7 @@
 using namespace yasem;
 
 SamsungSmartTvWebPlugin::SamsungSmartTvWebPlugin()
-    : StbPlugin()
+    : StbPluginObject()
 {
     STUB();
     this->browser(NULL);
@@ -92,15 +92,15 @@ SamsungSmartTvWebPlugin::SamsungSmartTvWebPlugin()
 }
 
 
-PLUGIN_ERROR_CODES SamsungSmartTvWebPlugin::initialize()
+PluginErrorCodes SamsungSmartTvWebPlugin::initialize()
 {
     STUB();
-    browser(dynamic_cast<BrowserPlugin*>(PluginManager::instance()->getByRole(ROLE_BROWSER)));
+    browser(dynamic_cast<BrowserPluginObject*>(PluginManager::instance()->getByRole(ROLE_BROWSER)));
     Q_ASSERT(browser() != NULL);
     return PLUGIN_ERROR_NO_ERROR;
 }
 
-PLUGIN_ERROR_CODES SamsungSmartTvWebPlugin::deinitialize()
+PluginErrorCodes SamsungSmartTvWebPlugin::deinitialize()
 {
     return PLUGIN_ERROR_NO_ERROR;
 }
@@ -110,7 +110,7 @@ QUrl SamsungSmartTvWebPlugin::handleUrl(QUrl &url)
     //STUB();
     QString urlString = url.url();
 
-    if(browser()->url().toString() == "")
+    if(m_page->.toString() == "")
     {
         QUrl newUrl(urlString);
         newUrl.setQuery("country=US&lang=en&modelid=13_FOXP&server=1&area=USA&product=0&mgrver=0.1&id=cp_id&pw=cp_pass");
@@ -200,7 +200,7 @@ void SamsungSmartTvWebPlugin::applyFixes()
 
 }
 
-void SamsungSmartTvWebPlugin::init(AbstractWebPage* page)
+void SamsungSmartTvWebPlugin::initObject(AbstractWebPage* page)
 {
     resetObjects(page);
 }

@@ -15,7 +15,8 @@ TEMPLATE = lib
 
 DEFINES += SAMSUNGSMARTTVWEBPLUGIN_LIBRARY
 
-INCLUDEPATH += ../../yasem-core
+INCLUDEPATH += ../../yasem-core/
+DEPENDPATH += ../../yasem-core/
 
 SOURCES += samsungsmarttvwebplugin.cpp \
     audio.cpp \
@@ -38,7 +39,9 @@ SOURCES += samsungsmarttvwebplugin.cpp \
     storage.cpp \
     taskmanager.cpp \
     device.cpp \
-    download.cpp
+    download.cpp \
+    ../../yasem-core/plugin.cpp \
+    ../../yasem-core/stbplugin.cpp
 
 HEADERS += samsungsmarttvwebplugin.h\
         samsungsmarttvwebplugin_global.h \
@@ -63,7 +66,8 @@ HEADERS += samsungsmarttvwebplugin.h\
     storage.h \
     taskmanager.h \
     device.h \
-    download.h
+    download.h \
+    ../../yasem-core/plugin.h
 
 unix {
     target.path = /usr/lib

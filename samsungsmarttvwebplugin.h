@@ -1,14 +1,14 @@
 #ifndef SAMSUNGSMARTTVWEBPLUGIN_H
 #define SAMSUNGSMARTTVWEBPLUGIN_H
 
-#include "stbplugin.h"
+#include "stbpluginobject.h"
 
 #include "samsungsmarttvwebplugin_global.h"
 
 #include <QObject>
 #include <QUrl>
 #include <datasourceplugin.h>
-#include <guiplugin.h>
+#include <guipluginobject.h>
 
 namespace yasem
 {
@@ -16,12 +16,12 @@ namespace yasem
 class Profile;
 class AbstractWebPage;
 
-class SAMSUNGSMARTTVWEBPLUGINSHARED_EXPORT SamsungSmartTvWebPlugin: public QObject,
-        public StbPlugin
+class SAMSUNGSMARTTVWEBPLUGINSHARED_EXPORT SamsungSmartTvWebPlugin: public PluginQObject, public Plugin,
+        public StbPluginObject
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "com.mvas.yasem.SamsungSmartTvWebPlugin/1.0" FILE "metadata.json")
-    Q_INTERFACES(yasem::Plugin yasem::StbPlugin)
+    Q_INTERFACES(yasem::Plugin yasem::StbPluginObject)
 
     Q_CLASSINFO("author", "Maxim Vasilchuk")
     Q_CLASSINFO("description", "Samsung Smart TV plugin for YASEM")
@@ -30,8 +30,8 @@ public:
 
     // Plugin interface
 public:
-    PLUGIN_ERROR_CODES initialize();
-    PLUGIN_ERROR_CODES deinitialize();
+    PluginErrorCodes initialize();
+    PluginErrorCodes deinitialize();
 
     QUrl handleUrl(QUrl &url);
 
@@ -54,7 +54,7 @@ protected:
 
     // StbProfilePlugin interface
 public:
-    void init(AbstractWebPage* page);
+    void initObject(AbstractWebPage* page);
 
     // StbPlugin interface
 

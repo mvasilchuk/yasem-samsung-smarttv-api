@@ -14,8 +14,7 @@ class SamsungProfile : public QObject, public Profile
 {
     Q_OBJECT
 public:
-    explicit SamsungProfile(StbPlugin *plugin, const QString &id);
-
+    explicit SamsungProfile(StbPluginObject *plugin, const QString &id);
 
     ConfigData configData;
 signals:

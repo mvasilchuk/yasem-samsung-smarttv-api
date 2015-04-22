@@ -8,7 +8,7 @@
 
 namespace yasem
 {
-class StbPlugin;
+class StbPluginObject;
 
 class FileSystem: public BaseWidget
 {

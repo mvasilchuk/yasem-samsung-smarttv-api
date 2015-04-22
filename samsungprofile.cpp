@@ -1,5 +1,5 @@
 #include "samsungprofile.h"
-#include "browserplugin.h"
+#include "browserpluginobject.h"
 #include "profilemanager.h"
 #include "appcommon.h"
 #include "window.h"
@@ -9,7 +9,7 @@
 
 using namespace yasem;
 
-SamsungProfile::SamsungProfile(StbPlugin *profilePlugin, const QString &id = "") :
+SamsungProfile::SamsungProfile(StbPluginObject *profilePlugin, const QString &id = "") :
     Profile(profilePlugin, id)
 {
     userAgents.insert("UN46ES7100F", "Mozilla/5.0 (SMART-TV; X11; Linux i686) AppleWebKit/534.7 (KHTML, like Gecko) Version/5.0 Safari/534.7");
@@ -25,10 +25,10 @@ void SamsungProfile::start()
     QString defaultUrlString = "file://~/Dropbox/src/NetTvPlus_1.1_Europe_20121011/index.html";
 
     configureKeyMap();
-    profilePlugin->browser()->stb(profilePlugin);
+    m_profile_plugin->browser()->stb(m_profile_plugin);
 
     QString userAgent = get(CONFIG_SUBMODEL, "UN46ES7100F");
-    profilePlugin->browser()->setUserAgent(userAgents.value(userAgent));
+    m_profile_plugin->browser()->setUserAgent(userAgents.value(userAgent));
 
     QString urlString = portal();
     DEBUG() << urlString;
@@ -37,15 +37,15 @@ void SamsungProfile::start()
 
     if(configData.width > 0 && configData.height > 0)
     {
-        profilePlugin->browser()->setInnerSize(configData.width, configData.height);
+        m_profile_plugin->browser()->setInnerSize(configData.width, configData.height);
     }
     else
     {
         QString portalSize = get(CONFIG_PORTAL_SIZE, "qHD");
-        profilePlugin->browser()->setInnerSize(portalResolutions.value(portalSize));
+        m_profile_plugin->browser()->setInnerSize(portalResolutions.value(portalSize));
     }
 
-    profilePlugin->browser()->load(portalUrl);
+    m_profile_plugin->browser()->load(portalUrl);
 }
 
 void SamsungProfile::stop()
@@ -77,7 +77,7 @@ void SamsungProfile::initDefaults()
 void SamsungProfile::configureKeyMap()
 {
     STUB();
-    BrowserPlugin* browser = profilePlugin->browser();
+    BrowserPluginObject* browser = m_profile_plugin->browser();
 
     browser->clearKeyEvents();
 

@@ -1,5 +1,5 @@
 #include "frontpanel.h"
-#include "stbplugin.h"
+#include "stbpluginobject.h"
 
 
 using namespace yasem;

@@ -1,6 +1,6 @@
 #include "audio.h"
-#include "stbplugin.h"
-#include "datasource.h"
+#include "stbpluginobject.h"
+#include "datasourcepluginobject.h"
 #include "pluginmanager.h"
 
 using namespace yasem;

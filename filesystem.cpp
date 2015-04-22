@@ -1,6 +1,6 @@
 #include "filesystem.h"
-#include "stbplugin.h"
-#include "browserplugin.h"
+#include "stbpluginobject.h"
+#include "browserpluginobject.h"
 
 #include <QDir>
 #include <QFile>

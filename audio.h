@@ -2,11 +2,11 @@
 #define INFOLINKAUDIO_H
 
 #include "BaseWidget.h"
-#include "mediaplayerplugin.h"
+#include "mediaplayerpluginobject.h"
 
 namespace yasem {
 
-class StbPlugin;
+class StbPluginObject;
 class Audio: public BaseWidget
 {
     Q_OBJECT

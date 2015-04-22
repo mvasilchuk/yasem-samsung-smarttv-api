@@ -1,6 +1,6 @@
 #include "tvmv.h"
-#include "stbplugin.h"
-#include "datasource.h"
+#include "stbpluginobject.h"
+#include "datasourcepluginobject.h"
 #include "enums.h"
 #include "macros.h"
 
