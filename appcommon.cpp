@@ -1,7 +1,7 @@
 
 #include "appcommon.h"
 #include "macros.h"
-#include "browserpluginobject.h"
+#include "browser.h"
 
 using namespace yasem;
 

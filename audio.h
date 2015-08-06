@@ -2,7 +2,7 @@
 #define INFOLINKAUDIO_H
 
 #include "BaseWidget.h"
-#include "mediaplayerpluginobject.h"
+#include "mediaplayer.h"
 
 namespace yasem {
 

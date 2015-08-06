@@ -1,7 +1,7 @@
 
 #include "stbprofile.h"
 #include "plugin.h"
-#include "browserpluginobject.h"
+#include "browser.h"
 #include "samsungsmarttvwebplugin.h"
 #include "audio.h"
 #include "tvmv.h"

@@ -7,8 +7,8 @@
 
 #include <QObject>
 #include <QUrl>
-#include <datasourceplugin.h>
-#include <guipluginobject.h>
+#include <datasourcefactory.h>
+#include <gui.h>
 
 namespace yasem
 {

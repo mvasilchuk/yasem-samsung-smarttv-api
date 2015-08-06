@@ -1,5 +1,5 @@
 #include "samsungprofile.h"
-#include "browserpluginobject.h"
+#include "browser.h"
 #include "profilemanager.h"
 #include "appcommon.h"
 #include "window.h"
